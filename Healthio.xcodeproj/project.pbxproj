@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC65D77D2CD0149C00D466BD /* HealthioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D77A2CD0149C00D466BD /* HealthioApp.swift */; };
+		BC65D7BF2CD014A100D466BD /* BloodPressureBarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B42CD014A100D466BD /* BloodPressureBarGraph.swift */; };
+		BC65D7C02CD014A100D466BD /* StubBloodPressureDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D79F2CD014A100D466BD /* StubBloodPressureDBRepository.swift */; };
+		BC65D7C12CD014A100D466BD /* BloodPressureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B52CD014A100D466BD /* BloodPressureView.swift */; };
+		BC65D7C22CD014A100D466BD /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B12CD014A100D466BD /* PlaceholderView.swift */; };
+		BC65D7C32CD014A100D466BD /* EnvironmentValuesExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7852CD014A100D466BD /* EnvironmentValuesExtensions.swift */; };
+		BC65D7C42CD014A100D466BD /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7902CD014A100D466BD /* AppEnvironment.swift */; };
+		BC65D7C52CD014A100D466BD /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78C2CD014A100D466BD /* Loadable.swift */; };
+		BC65D7C62CD014A100D466BD /* DateFormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7882CD014A100D466BD /* DateFormatterExtensions.swift */; };
+		BC65D7C72CD014A100D466BD /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B92CD014A100D466BD /* SettingsScreen.swift */; };
+		BC65D7C82CD014A100D466BD /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7862CD014A100D466BD /* UserDefaultsExtension.swift */; };
+		BC65D7C92CD014A100D466BD /* StubUsersDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D79C2CD014A100D466BD /* StubUsersDBRepository.swift */; };
+		BC65D7CA2CD014A100D466BD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B22CD014A100D466BD /* AvatarView.swift */; };
+		BC65D7CB2CD014A100D466BD /* StubBloodPressureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7A62CD014A100D466BD /* StubBloodPressureService.swift */; };
+		BC65D7CC2CD014A100D466BD /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7932CD014A100D466BD /* UserProfile.swift */; };
+		BC65D7CD2CD014A100D466BD /* BloodPressureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7A52CD014A100D466BD /* BloodPressureService.swift */; };
+		BC65D7CE2CD014A100D466BD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7812CD014A100D466BD /* CoreDataStack.swift */; };
+		BC65D7CF2CD014A100D466BD /* BloodPressureCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7952CD014A100D466BD /* BloodPressureCategory.swift */; };
+		BC65D7D02CD014A100D466BD /* StubUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7A32CD014A100D466BD /* StubUsersService.swift */; };
+		BC65D7D12CD014A100D466BD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78E2CD014A100D466BD /* AppState.swift */; };
+		BC65D7D22CD014A100D466BD /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7A22CD014A100D466BD /* UsersService.swift */; };
+		BC65D7D32CD014A100D466BD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7982CD014A100D466BD /* Theme.swift */; };
+		BC65D7D42CD014A100D466BD /* BloodPressureDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D79E2CD014A100D466BD /* BloodPressureDBRepository.swift */; };
+		BC65D7D52CD014A100D466BD /* SettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AF2CD014A100D466BD /* SettingsRootView.swift */; };
+		BC65D7D62CD014A100D466BD /* RouterEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AB2CD014A100D466BD /* RouterEntryPoint.swift */; };
+		BC65D7D72CD014A100D466BD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78B2CD014A100D466BD /* Store.swift */; };
+		BC65D7D82CD014A100D466BD /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7802CD014A100D466BD /* CoreDataHelpers.swift */; };
+		BC65D7D92CD014A100D466BD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7A92CD014A100D466BD /* Router.swift */; };
+		BC65D7DA2CD014A100D466BD /* UsersDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D79B2CD014A100D466BD /* UsersDBRepository.swift */; };
+		BC65D7DB2CD014A100D466BD /* OverviewRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AE2CD014A100D466BD /* OverviewRootView.swift */; };
+		BC65D7DC2CD014A100D466BD /* RouterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AA2CD014A100D466BD /* RouterEntry.swift */; };
+		BC65D7DD2CD014A100D466BD /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7BB2CD014A100D466BD /* ProfileScreen.swift */; };
+		BC65D7DE2CD014A100D466BD /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78F2CD014A100D466BD /* DIContainer.swift */; };
+		BC65D7DF2CD014A100D466BD /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AD2CD014A100D466BD /* Routes.swift */; };
+		BC65D7E02CD014A100D466BD /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78A2CD014A100D466BD /* CancelBag.swift */; };
+		BC65D7E12CD014A100D466BD /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7872CD014A100D466BD /* ViewExtension.swift */; };
+		BC65D7E22CD014A100D466BD /* BloodPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7962CD014A100D466BD /* BloodPressure.swift */; };
+		BC65D7E32CD014A100D466BD /* OverviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B72CD014A100D466BD /* OverviewScreen.swift */; };
+		BC65D7E42CD014A100D466BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7912CD014A100D466BD /* AppDelegate.swift */; };
+		BC65D7EF2CD014B400D466BD /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7EC2CD014B400D466BD /* InfoPlist.xcstrings */; };
+		BC65D7F02CD014B400D466BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7E82CD014B400D466BD /* Preview Assets.xcassets */; };
+		BC65D7F12CD014B400D466BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7EB2CD014B400D466BD /* Localizable.strings */; };
+		BC65D7F22CD014B400D466BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7E72CD014B400D466BD /* Assets.xcassets */; };
+		BC65D7F32CD014B400D466BD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7E62CD014B400D466BD /* Colors.xcassets */; };
+		BC65D7F72CD014C500D466BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7F62CD014C500D466BD /* LaunchScreen.storyboard */; };
+		BC65D7F82CD0187200D466BD /* db_model_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7832CD014A100D466BD /* db_model_v1.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BC65D75C2CD0137E00D466BD /* Healthio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC65D77A2CD0149C00D466BD /* HealthioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthioApp.swift; sourceTree = "<group>"; };
+		BC65D7802CD014A100D466BD /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		BC65D7812CD014A100D466BD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		BC65D7822CD014A100D466BD /* db_model_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db_model_v1.xcdatamodel; sourceTree = "<group>"; };
+		BC65D7852CD014A100D466BD /* EnvironmentValuesExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValuesExtensions.swift; sourceTree = "<group>"; };
+		BC65D7862CD014A100D466BD /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		BC65D7872CD014A100D466BD /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		BC65D7882CD014A100D466BD /* DateFormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtensions.swift; sourceTree = "<group>"; };
+		BC65D78A2CD014A100D466BD /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		BC65D78B2CD014A100D466BD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		BC65D78C2CD014A100D466BD /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		BC65D78E2CD014A100D466BD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BC65D78F2CD014A100D466BD /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		BC65D7902CD014A100D466BD /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		BC65D7912CD014A100D466BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC65D7932CD014A100D466BD /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		BC65D7952CD014A100D466BD /* BloodPressureCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCategory.swift; sourceTree = "<group>"; };
+		BC65D7962CD014A100D466BD /* BloodPressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressure.swift; sourceTree = "<group>"; };
+		BC65D7982CD014A100D466BD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BC65D79B2CD014A100D466BD /* UsersDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDBRepository.swift; sourceTree = "<group>"; };
+		BC65D79C2CD014A100D466BD /* StubUsersDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUsersDBRepository.swift; sourceTree = "<group>"; };
+		BC65D79E2CD014A100D466BD /* BloodPressureDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureDBRepository.swift; sourceTree = "<group>"; };
+		BC65D79F2CD014A100D466BD /* StubBloodPressureDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBloodPressureDBRepository.swift; sourceTree = "<group>"; };
+		BC65D7A22CD014A100D466BD /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		BC65D7A32CD014A100D466BD /* StubUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUsersService.swift; sourceTree = "<group>"; };
+		BC65D7A52CD014A100D466BD /* BloodPressureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureService.swift; sourceTree = "<group>"; };
+		BC65D7A62CD014A100D466BD /* StubBloodPressureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBloodPressureService.swift; sourceTree = "<group>"; };
+		BC65D7A92CD014A100D466BD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BC65D7AA2CD014A100D466BD /* RouterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterEntry.swift; sourceTree = "<group>"; };
+		BC65D7AB2CD014A100D466BD /* RouterEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterEntryPoint.swift; sourceTree = "<group>"; };
+		BC65D7AD2CD014A100D466BD /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		BC65D7AE2CD014A100D466BD /* OverviewRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRootView.swift; sourceTree = "<group>"; };
+		BC65D7AF2CD014A100D466BD /* SettingsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootView.swift; sourceTree = "<group>"; };
+		BC65D7B12CD014A100D466BD /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		BC65D7B22CD014A100D466BD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		BC65D7B42CD014A100D466BD /* BloodPressureBarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureBarGraph.swift; sourceTree = "<group>"; };
+		BC65D7B52CD014A100D466BD /* BloodPressureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureView.swift; sourceTree = "<group>"; };
+		BC65D7B72CD014A100D466BD /* OverviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewScreen.swift; sourceTree = "<group>"; };
+		BC65D7B92CD014A100D466BD /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		BC65D7BB2CD014A100D466BD /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		BC65D7E62CD014B400D466BD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		BC65D7E72CD014B400D466BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC65D7E82CD014B400D466BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC65D7E92CD014B400D466BD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BC65D7EA2CD014B400D466BD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BC65D7EC2CD014B400D466BD /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		BC65D7F42CD014B800D466BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC65D7F62CD014C500D466BD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC65D7592CD0137E00D466BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC65D7532CD0137E00D466BD = {
+			isa = PBXGroup;
+			children = (
+				BC65D77B2CD0149C00D466BD /* Healthio */,
+				BC65D75D2CD0137E00D466BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC65D75D2CD0137E00D466BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D75C2CD0137E00D466BD /* Healthio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC65D77B2CD0149C00D466BD /* Healthio */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7842CD014A100D466BD /* Persistence */,
+				BC65D7892CD014A100D466BD /* Extensions */,
+				BC65D78D2CD014A100D466BD /* Utilities */,
+				BC65D7922CD014A100D466BD /* System */,
+				BC65D79A2CD014A100D466BD /* Models */,
+				BC65D7A12CD014A100D466BD /* Repositories */,
+				BC65D7A82CD014A100D466BD /* Services */,
+				BC65D7BE2CD014A100D466BD /* UI */,
+				BC65D7F62CD014C500D466BD /* LaunchScreen.storyboard */,
+				BC65D77A2CD0149C00D466BD /* HealthioApp.swift */,
+				BC65D7F42CD014B800D466BD /* Info.plist */,
+				BC65D7EE2CD014B400D466BD /* Resources */,
+			);
+			path = Healthio;
+			sourceTree = "<group>";
+		};
+		BC65D7842CD014A100D466BD /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7802CD014A100D466BD /* CoreDataHelpers.swift */,
+				BC65D7812CD014A100D466BD /* CoreDataStack.swift */,
+				BC65D7832CD014A100D466BD /* db_model_v1.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		BC65D7892CD014A100D466BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7852CD014A100D466BD /* EnvironmentValuesExtensions.swift */,
+				BC65D7862CD014A100D466BD /* UserDefaultsExtension.swift */,
+				BC65D7872CD014A100D466BD /* ViewExtension.swift */,
+				BC65D7882CD014A100D466BD /* DateFormatterExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC65D78D2CD014A100D466BD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D78A2CD014A100D466BD /* CancelBag.swift */,
+				BC65D78B2CD014A100D466BD /* Store.swift */,
+				BC65D78C2CD014A100D466BD /* Loadable.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BC65D7922CD014A100D466BD /* System */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D78E2CD014A100D466BD /* AppState.swift */,
+				BC65D78F2CD014A100D466BD /* DIContainer.swift */,
+				BC65D7902CD014A100D466BD /* AppEnvironment.swift */,
+				BC65D7912CD014A100D466BD /* AppDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		BC65D7942CD014A100D466BD /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7932CD014A100D466BD /* UserProfile.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		BC65D7972CD014A100D466BD /* BloodPressure */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7952CD014A100D466BD /* BloodPressureCategory.swift */,
+				BC65D7962CD014A100D466BD /* BloodPressure.swift */,
+			);
+			path = BloodPressure;
+			sourceTree = "<group>";
+		};
+		BC65D7992CD014A100D466BD /* Classifiers */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7982CD014A100D466BD /* Theme.swift */,
+			);
+			path = Classifiers;
+			sourceTree = "<group>";
+		};
+		BC65D79A2CD014A100D466BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7942CD014A100D466BD /* Users */,
+				BC65D7972CD014A100D466BD /* BloodPressure */,
+				BC65D7992CD014A100D466BD /* Classifiers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC65D79D2CD014A100D466BD /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D79B2CD014A100D466BD /* UsersDBRepository.swift */,
+				BC65D79C2CD014A100D466BD /* StubUsersDBRepository.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		BC65D7A02CD014A100D466BD /* BloodPressure */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D79E2CD014A100D466BD /* BloodPressureDBRepository.swift */,
+				BC65D79F2CD014A100D466BD /* StubBloodPressureDBRepository.swift */,
+			);
+			path = BloodPressure;
+			sourceTree = "<group>";
+		};
+		BC65D7A12CD014A100D466BD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D79D2CD014A100D466BD /* Users */,
+				BC65D7A02CD014A100D466BD /* BloodPressure */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BC65D7A42CD014A100D466BD /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7A22CD014A100D466BD /* UsersService.swift */,
+				BC65D7A32CD014A100D466BD /* StubUsersService.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		BC65D7A72CD014A100D466BD /* BloodPressure */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7A52CD014A100D466BD /* BloodPressureService.swift */,
+				BC65D7A62CD014A100D466BD /* StubBloodPressureService.swift */,
+			);
+			path = BloodPressure;
+			sourceTree = "<group>";
+		};
+		BC65D7A82CD014A100D466BD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7A42CD014A100D466BD /* Users */,
+				BC65D7A72CD014A100D466BD /* BloodPressure */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BC65D7AC2CD014A100D466BD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7A92CD014A100D466BD /* Router.swift */,
+				BC65D7AA2CD014A100D466BD /* RouterEntry.swift */,
+				BC65D7AB2CD014A100D466BD /* RouterEntryPoint.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BC65D7B02CD014A100D466BD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7AC2CD014A100D466BD /* Router */,
+				BC65D7AD2CD014A100D466BD /* Routes.swift */,
+				BC65D7AE2CD014A100D466BD /* OverviewRootView.swift */,
+				BC65D7AF2CD014A100D466BD /* SettingsRootView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BC65D7B32CD014A100D466BD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7B12CD014A100D466BD /* PlaceholderView.swift */,
+				BC65D7B22CD014A100D466BD /* AvatarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BC65D7B62CD014A100D466BD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7B42CD014A100D466BD /* BloodPressureBarGraph.swift */,
+				BC65D7B52CD014A100D466BD /* BloodPressureView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BC65D7B82CD014A100D466BD /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7B62CD014A100D466BD /* Components */,
+				BC65D7B72CD014A100D466BD /* OverviewScreen.swift */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		BC65D7BA2CD014A100D466BD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7B92CD014A100D466BD /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BC65D7BC2CD014A100D466BD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7BB2CD014A100D466BD /* ProfileScreen.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BC65D7BD2CD014A100D466BD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7B82CD014A100D466BD /* Overview */,
+				BC65D7BA2CD014A100D466BD /* Settings */,
+				BC65D7BC2CD014A100D466BD /* Profile */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BC65D7BE2CD014A100D466BD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7B02CD014A100D466BD /* Navigation */,
+				BC65D7B32CD014A100D466BD /* Components */,
+				BC65D7BD2CD014A100D466BD /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BC65D7ED2CD014B400D466BD /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7EB2CD014B400D466BD /* Localizable.strings */,
+				BC65D7EC2CD014B400D466BD /* InfoPlist.xcstrings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		BC65D7EE2CD014B400D466BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC65D7E62CD014B400D466BD /* Colors.xcassets */,
+				BC65D7E72CD014B400D466BD /* Assets.xcassets */,
+				BC65D7E82CD014B400D466BD /* Preview Assets.xcassets */,
+				BC65D7ED2CD014B400D466BD /* Strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC65D75B2CD0137E00D466BD /* Healthio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC65D76A2CD0137F00D466BD /* Build configuration list for PBXNativeTarget "Healthio" */;
+			buildPhases = (
+				BC65D7582CD0137E00D466BD /* Sources */,
+				BC65D7592CD0137E00D466BD /* Frameworks */,
+				BC65D75A2CD0137E00D466BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Healthio;
+			packageProductDependencies = (
+			);
+			productName = Healthio;
+			productReference = BC65D75C2CD0137E00D466BD /* Healthio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC65D7542CD0137E00D466BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					BC65D75B2CD0137E00D466BD = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = BC65D7572CD0137E00D466BD /* Build configuration list for PBXProject "Healthio" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				sk,
+			);
+			mainGroup = BC65D7532CD0137E00D466BD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BC65D75D2CD0137E00D466BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC65D75B2CD0137E00D466BD /* Healthio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC65D75A2CD0137E00D466BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC65D7EF2CD014B400D466BD /* InfoPlist.xcstrings in Resources */,
+				BC65D7F72CD014C500D466BD /* LaunchScreen.storyboard in Resources */,
+				BC65D7F02CD014B400D466BD /* Preview Assets.xcassets in Resources */,
+				BC65D7F12CD014B400D466BD /* Localizable.strings in Resources */,
+				BC65D7F22CD014B400D466BD /* Assets.xcassets in Resources */,
+				BC65D7F32CD014B400D466BD /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC65D7582CD0137E00D466BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC65D7F82CD0187200D466BD /* db_model_v1.xcdatamodeld in Sources */,
+				BC65D77D2CD0149C00D466BD /* HealthioApp.swift in Sources */,
+				BC65D7BF2CD014A100D466BD /* BloodPressureBarGraph.swift in Sources */,
+				BC65D7C02CD014A100D466BD /* StubBloodPressureDBRepository.swift in Sources */,
+				BC65D7C12CD014A100D466BD /* BloodPressureView.swift in Sources */,
+				BC65D7C22CD014A100D466BD /* PlaceholderView.swift in Sources */,
+				BC65D7C32CD014A100D466BD /* EnvironmentValuesExtensions.swift in Sources */,
+				BC65D7C42CD014A100D466BD /* AppEnvironment.swift in Sources */,
+				BC65D7C52CD014A100D466BD /* Loadable.swift in Sources */,
+				BC65D7C62CD014A100D466BD /* DateFormatterExtensions.swift in Sources */,
+				BC65D7C72CD014A100D466BD /* SettingsScreen.swift in Sources */,
+				BC65D7C82CD014A100D466BD /* UserDefaultsExtension.swift in Sources */,
+				BC65D7C92CD014A100D466BD /* StubUsersDBRepository.swift in Sources */,
+				BC65D7CA2CD014A100D466BD /* AvatarView.swift in Sources */,
+				BC65D7CB2CD014A100D466BD /* StubBloodPressureService.swift in Sources */,
+				BC65D7CC2CD014A100D466BD /* UserProfile.swift in Sources */,
+				BC65D7CD2CD014A100D466BD /* BloodPressureService.swift in Sources */,
+				BC65D7CE2CD014A100D466BD /* CoreDataStack.swift in Sources */,
+				BC65D7CF2CD014A100D466BD /* BloodPressureCategory.swift in Sources */,
+				BC65D7D02CD014A100D466BD /* StubUsersService.swift in Sources */,
+				BC65D7D12CD014A100D466BD /* AppState.swift in Sources */,
+				BC65D7D22CD014A100D466BD /* UsersService.swift in Sources */,
+				BC65D7D32CD014A100D466BD /* Theme.swift in Sources */,
+				BC65D7D42CD014A100D466BD /* BloodPressureDBRepository.swift in Sources */,
+				BC65D7D52CD014A100D466BD /* SettingsRootView.swift in Sources */,
+				BC65D7D62CD014A100D466BD /* RouterEntryPoint.swift in Sources */,
+				BC65D7D72CD014A100D466BD /* Store.swift in Sources */,
+				BC65D7D82CD014A100D466BD /* CoreDataHelpers.swift in Sources */,
+				BC65D7D92CD014A100D466BD /* Router.swift in Sources */,
+				BC65D7DA2CD014A100D466BD /* UsersDBRepository.swift in Sources */,
+				BC65D7DB2CD014A100D466BD /* OverviewRootView.swift in Sources */,
+				BC65D7DC2CD014A100D466BD /* RouterEntry.swift in Sources */,
+				BC65D7DD2CD014A100D466BD /* ProfileScreen.swift in Sources */,
+				BC65D7DE2CD014A100D466BD /* DIContainer.swift in Sources */,
+				BC65D7DF2CD014A100D466BD /* Routes.swift in Sources */,
+				BC65D7E02CD014A100D466BD /* CancelBag.swift in Sources */,
+				BC65D7E12CD014A100D466BD /* ViewExtension.swift in Sources */,
+				BC65D7E22CD014A100D466BD /* BloodPressure.swift in Sources */,
+				BC65D7E32CD014A100D466BD /* OverviewScreen.swift in Sources */,
+				BC65D7E42CD014A100D466BD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC65D7EB2CD014B400D466BD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC65D7E92CD014B400D466BD /* Localizable.strings */,
+				BC65D7EA2CD014B400D466BD /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC65D7682CD0137F00D466BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC65D7692CD0137F00D466BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC65D76B2CD0137F00D466BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = NBK597F2XX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Healthio/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.balaz.healthioapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC65D76C2CD0137F00D466BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = NBK597F2XX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Healthio/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.balaz.healthioapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC65D7572CD0137E00D466BD /* Build configuration list for PBXProject "Healthio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC65D7682CD0137F00D466BD /* Debug */,
+				BC65D7692CD0137F00D466BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC65D76A2CD0137F00D466BD /* Build configuration list for PBXNativeTarget "Healthio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC65D76B2CD0137F00D466BD /* Debug */,
+				BC65D76C2CD0137F00D466BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC65D7832CD014A100D466BD /* db_model_v1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC65D7822CD014A100D466BD /* db_model_v1.xcdatamodel */,
+			);
+			currentVersion = BC65D7822CD014A100D466BD /* db_model_v1.xcdatamodel */;
+			name = db_model_v1.xcdatamodeld;
+			path = "../../../../../Downloads/clean-architecture-swiftui-master 3/CountriesSwiftUI/Persistence/db_model_v1.xcdatamodeld";
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BC65D7542CD0137E00D466BD /* Project object */;
+}

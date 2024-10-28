@@ -1,0 +1,39 @@
+"blood_pressure_normal" = "Normálny";
+"blood_pressure_elevated" = "Zvýšený";
+"blood_pressure_stage_1" = "Vysoký krvný tlak - Stupeň 1";
+"blood_pressure_stage_2" = "Vysoký krvný tlak - Stupeň 2";
+"blood_pressure_crisis" = "Hypertenzná kríza - vyhľadajte lekársku pomoc";
+"blood_pressure_unknown" = "Neznámy";
+
+"blood_pressure_date" = "Dátum";
+"blood_pressure_pulse" = "Pulz";
+"blood_pressure_diastolic" = "Diastolický";
+"blood_pressure_systolic" = "Systolický";
+"blood_pressure_title"="Krvný tlak";
+
+"blood_pressure_bpm" = "BPM";
+"graph_latest" = "Najnovšie";
+
+"title_overview" = "Prehľad";
+"title_settings" = "Nastavenia";
+"title_profile" = "Profil";
+
+"greetings_morning" = "Dobré ráno";
+"greetings_afternoon" = "Dobrý deň";
+"greetings_evening" = "Dobrý večer";
+"greetings_night" = "Dobrú noc";
+
+"soon_title" = "Pracujeme na tom";
+"soon_subtitle" = "Táto funkcia bude čoskoro dostupná.";
+
+"theme_system" = "Systém";
+"theme_dark" = "Tmavý";
+"theme_light" = "Svetlý";
+
+"global_save"="Uložiť";
+"global_edit"="Upraviť";
+"global_cancel"="Zrušiť";
+"global_repo_error"="Operáciu sa nepodarilo vykonať";
+"unspecified_error"="Nešpecifikovaná chyba";
+"global_ok"="OK";
+"global_not_available"="n/a";

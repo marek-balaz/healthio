@@ -1,0 +1,39 @@
+"blood_pressure_normal"="Normal";
+"blood_pressure_elevated"="Elevated";
+"blood_pressure_stage_1"="High Blood Pressure Stage 1";
+"blood_pressure_stage_2"="High Blood Pressure Stage 2";
+"blood_pressure_crisis"="Hypertensive Crisis - seek medical care";
+"blood_pressure_unknown"="Unknown";
+
+"blood_pressure_date"="Date";
+"blood_pressure_pulse"="Pulse";
+"blood_pressure_diastolic"="Diastolic";
+"blood_pressure_systolic"="Systolic";
+"blood_pressure_title"="Blood pressure";
+
+"blood_pressure_bpm"="BPM";
+"graph_latest"="Latest";
+
+"title_overview"="Overview";
+"title_settings"="Settings";
+"title_profile"="Profile";
+
+"greetings_morning" = "Good morning";
+"greetings_afternoon" = "Good afternoon";
+"greetings_evening" = "Good evening";
+"greetings_night" = "Good night";
+
+"soon_title" = "Work in progress";
+"soon_subtitle" = "This feature will be available soon.";
+
+"theme_system"="System";
+"theme_dark"="Dark";
+"theme_light"="Light";
+
+"global_save"="Save";
+"global_edit"="Edit";
+"global_cancel"="Cancel";
+"global_repo_error"="Operation could not be completed";
+"unspecified_error"="Unspecified error";
+"global_ok"="OK";
+"global_not_available"="n/a";
