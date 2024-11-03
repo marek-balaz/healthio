@@ -34,6 +34,7 @@
 "global_edit"="Upraviť";
 "global_cancel"="Zrušiť";
 "global_repo_error"="Operáciu sa nepodarilo vykonať";
+"global_repo_not_found"="Nenašlo sa.";
 "unspecified_error"="Nešpecifikovaná chyba";
 "global_ok"="OK";
 "global_not_available"="n/a";

@@ -16,7 +16,7 @@ protocol UsersService {
     
     func editUser(_ userProfile: UserProfile) -> AnyPublisher<Void, Error>
     
-    func deleteUser(_ userProfile: UserProfile) -> AnyPublisher<Void, Error>
+    func deleteUser(_ id: UUID) -> AnyPublisher<Void, Error>
     
     func fetchUsers(search: String) -> AnyPublisher<[UserProfile], Error>
     
@@ -56,15 +56,15 @@ struct UsersServiceImpl: UsersService {
     }
     
     func addUser(_ userProfile: UserProfile) -> AnyPublisher<Void, Error> {
-        return usersRepository.add(userProfile: userProfile)
+        return usersRepository.store(userProfile: userProfile)
     }
     
     func editUser(_ userProfile: UserProfile) -> AnyPublisher<Void, Error> {
         return usersRepository.edit(userProfile: userProfile)
     }
     
-    func deleteUser(_ userProfile: UserProfile) -> AnyPublisher<Void, Error> {
-        return usersRepository.delete(userProfile: userProfile)
+    func deleteUser(_ id: UUID) -> AnyPublisher<Void, Error> {
+        return usersRepository.delete(userProfileId: id)
     }
     
     func fetchUsers(search: String) -> AnyPublisher<[UserProfile], Error> {

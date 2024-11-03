@@ -52,6 +52,7 @@ extension AppEnvironment {
         
         let bloodPressureService = BloodPressureServiceImpl(
             appState: appState,
+            usersRepository: dbRepositories.usersRepository,
             bloodPressureRepository: dbRepositories.bloodPressureRepository
         )
         

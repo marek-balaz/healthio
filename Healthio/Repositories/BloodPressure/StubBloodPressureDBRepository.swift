@@ -10,31 +10,31 @@ import Combine
 import CoreData
 
 struct StubBloodPressureDBRepository: BloodPressureDBRepository {
-    
-    func add(bloodPressure: BloodPressure) -> AnyPublisher<Void, any Error> {
+
+    func store(bloodPressureRecords: [BloodPressure], for userProfileId: UUID) -> AnyPublisher<Void, Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
     
-    func edit(bloodPressure: BloodPressure) -> AnyPublisher<Void, any Error> {
+    func edit(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
     
-    func delete(bloodPressure: BloodPressure) -> AnyPublisher<Void, any Error> {
+    func delete(bloodPressureId: UUID) -> AnyPublisher<Void, Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
     
-    func fetchAll(_ userId: UUID?) -> AnyPublisher<[BloodPressure], any Error> {
+    func fetch(interval: Interval, for userProfileId: UUID) -> AnyPublisher<[BloodPressure], Error> {
         Future { promise in
-            promise(.success([]))
+            promise(.success(([])))
         }
         .eraseToAnyPublisher()
     }

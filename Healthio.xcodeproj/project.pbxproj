@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC135CB82CD3CD7900075723 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC135CB72CD3CD7900075723 /* AppError.swift */; };
+		BC135CBC2CD4F48600075723 /* BloodPressureDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC135CB92CD4F48600075723 /* BloodPressureDBRepository.swift */; };
+		BC135CBD2CD4F48600075723 /* StubBloodPressureDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC135CBA2CD4F48600075723 /* StubBloodPressureDBRepository.swift */; };
+		BC135CBF2CD4F55100075723 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC135CBE2CD4F55100075723 /* Interval.swift */; };
 		BC65D77D2CD0149C00D466BD /* HealthioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D77A2CD0149C00D466BD /* HealthioApp.swift */; };
 		BC65D7BF2CD014A100D466BD /* BloodPressureBarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B42CD014A100D466BD /* BloodPressureBarGraph.swift */; };
-		BC65D7C02CD014A100D466BD /* StubBloodPressureDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D79F2CD014A100D466BD /* StubBloodPressureDBRepository.swift */; };
 		BC65D7C12CD014A100D466BD /* BloodPressureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B52CD014A100D466BD /* BloodPressureView.swift */; };
 		BC65D7C22CD014A100D466BD /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7B12CD014A100D466BD /* PlaceholderView.swift */; };
 		BC65D7C32CD014A100D466BD /* EnvironmentValuesExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7852CD014A100D466BD /* EnvironmentValuesExtensions.swift */; };
@@ -29,7 +32,6 @@
 		BC65D7D12CD014A100D466BD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78E2CD014A100D466BD /* AppState.swift */; };
 		BC65D7D22CD014A100D466BD /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7A22CD014A100D466BD /* UsersService.swift */; };
 		BC65D7D32CD014A100D466BD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7982CD014A100D466BD /* Theme.swift */; };
-		BC65D7D42CD014A100D466BD /* BloodPressureDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D79E2CD014A100D466BD /* BloodPressureDBRepository.swift */; };
 		BC65D7D52CD014A100D466BD /* SettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AF2CD014A100D466BD /* SettingsRootView.swift */; };
 		BC65D7D62CD014A100D466BD /* RouterEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7AB2CD014A100D466BD /* RouterEntryPoint.swift */; };
 		BC65D7D72CD014A100D466BD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65D78B2CD014A100D466BD /* Store.swift */; };
@@ -52,15 +54,18 @@
 		BC65D7F22CD014B400D466BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7E72CD014B400D466BD /* Assets.xcassets */; };
 		BC65D7F32CD014B400D466BD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7E62CD014B400D466BD /* Colors.xcassets */; };
 		BC65D7F72CD014C500D466BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC65D7F62CD014C500D466BD /* LaunchScreen.storyboard */; };
-		BC65D7F82CD0187200D466BD /* db_model_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC65D7832CD014A100D466BD /* db_model_v1.xcdatamodeld */; };
+		BCCC8D3D2CD7E6D30036C8FC /* db_model_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCCC8D3B2CD7E6D30036C8FC /* db_model_v1.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC135CB72CD3CD7900075723 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		BC135CB92CD4F48600075723 /* BloodPressureDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureDBRepository.swift; sourceTree = "<group>"; };
+		BC135CBA2CD4F48600075723 /* StubBloodPressureDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBloodPressureDBRepository.swift; sourceTree = "<group>"; };
+		BC135CBE2CD4F55100075723 /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
 		BC65D75C2CD0137E00D466BD /* Healthio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC65D77A2CD0149C00D466BD /* HealthioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthioApp.swift; sourceTree = "<group>"; };
 		BC65D7802CD014A100D466BD /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		BC65D7812CD014A100D466BD /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		BC65D7822CD014A100D466BD /* db_model_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db_model_v1.xcdatamodel; sourceTree = "<group>"; };
 		BC65D7852CD014A100D466BD /* EnvironmentValuesExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValuesExtensions.swift; sourceTree = "<group>"; };
 		BC65D7862CD014A100D466BD /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		BC65D7872CD014A100D466BD /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -78,8 +83,6 @@
 		BC65D7982CD014A100D466BD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BC65D79B2CD014A100D466BD /* UsersDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDBRepository.swift; sourceTree = "<group>"; };
 		BC65D79C2CD014A100D466BD /* StubUsersDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUsersDBRepository.swift; sourceTree = "<group>"; };
-		BC65D79E2CD014A100D466BD /* BloodPressureDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureDBRepository.swift; sourceTree = "<group>"; };
-		BC65D79F2CD014A100D466BD /* StubBloodPressureDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBloodPressureDBRepository.swift; sourceTree = "<group>"; };
 		BC65D7A22CD014A100D466BD /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		BC65D7A32CD014A100D466BD /* StubUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUsersService.swift; sourceTree = "<group>"; };
 		BC65D7A52CD014A100D466BD /* BloodPressureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureService.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		BC65D7EC2CD014B400D466BD /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		BC65D7F42CD014B800D466BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC65D7F62CD014C500D466BD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCCC8D3C2CD7E6D30036C8FC /* db_model_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db_model_v1.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC135CBB2CD4F48600075723 /* BloodPressure */ = {
+			isa = PBXGroup;
+			children = (
+				BC135CB92CD4F48600075723 /* BloodPressureDBRepository.swift */,
+				BC135CBA2CD4F48600075723 /* StubBloodPressureDBRepository.swift */,
+			);
+			path = BloodPressure;
+			sourceTree = "<group>";
+		};
 		BC65D7532CD0137E00D466BD = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +171,7 @@
 			children = (
 				BC65D7802CD014A100D466BD /* CoreDataHelpers.swift */,
 				BC65D7812CD014A100D466BD /* CoreDataStack.swift */,
-				BC65D7832CD014A100D466BD /* db_model_v1.xcdatamodeld */,
+				BCCC8D3B2CD7E6D30036C8FC /* db_model_v1.xcdatamodeld */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -180,6 +193,7 @@
 				BC65D78A2CD014A100D466BD /* CancelBag.swift */,
 				BC65D78B2CD014A100D466BD /* Store.swift */,
 				BC65D78C2CD014A100D466BD /* Loadable.swift */,
+				BC135CB72CD3CD7900075723 /* AppError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -215,6 +229,7 @@
 		BC65D7992CD014A100D466BD /* Classifiers */ = {
 			isa = PBXGroup;
 			children = (
+				BC135CBE2CD4F55100075723 /* Interval.swift */,
 				BC65D7982CD014A100D466BD /* Theme.swift */,
 			);
 			path = Classifiers;
@@ -239,20 +254,11 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
-		BC65D7A02CD014A100D466BD /* BloodPressure */ = {
-			isa = PBXGroup;
-			children = (
-				BC65D79E2CD014A100D466BD /* BloodPressureDBRepository.swift */,
-				BC65D79F2CD014A100D466BD /* StubBloodPressureDBRepository.swift */,
-			);
-			path = BloodPressure;
-			sourceTree = "<group>";
-		};
 		BC65D7A12CD014A100D466BD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				BC65D79D2CD014A100D466BD /* Users */,
-				BC65D7A02CD014A100D466BD /* BloodPressure */,
+				BC135CBB2CD4F48600075723 /* BloodPressure */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -466,12 +472,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC65D7F82CD0187200D466BD /* db_model_v1.xcdatamodeld in Sources */,
 				BC65D77D2CD0149C00D466BD /* HealthioApp.swift in Sources */,
 				BC65D7BF2CD014A100D466BD /* BloodPressureBarGraph.swift in Sources */,
-				BC65D7C02CD014A100D466BD /* StubBloodPressureDBRepository.swift in Sources */,
 				BC65D7C12CD014A100D466BD /* BloodPressureView.swift in Sources */,
 				BC65D7C22CD014A100D466BD /* PlaceholderView.swift in Sources */,
+				BCCC8D3D2CD7E6D30036C8FC /* db_model_v1.xcdatamodeld in Sources */,
 				BC65D7C32CD014A100D466BD /* EnvironmentValuesExtensions.swift in Sources */,
 				BC65D7C42CD014A100D466BD /* AppEnvironment.swift in Sources */,
 				BC65D7C52CD014A100D466BD /* Loadable.swift in Sources */,
@@ -484,15 +489,16 @@
 				BC65D7CC2CD014A100D466BD /* UserProfile.swift in Sources */,
 				BC65D7CD2CD014A100D466BD /* BloodPressureService.swift in Sources */,
 				BC65D7CE2CD014A100D466BD /* CoreDataStack.swift in Sources */,
+				BC135CB82CD3CD7900075723 /* AppError.swift in Sources */,
 				BC65D7CF2CD014A100D466BD /* BloodPressureCategory.swift in Sources */,
 				BC65D7D02CD014A100D466BD /* StubUsersService.swift in Sources */,
 				BC65D7D12CD014A100D466BD /* AppState.swift in Sources */,
 				BC65D7D22CD014A100D466BD /* UsersService.swift in Sources */,
 				BC65D7D32CD014A100D466BD /* Theme.swift in Sources */,
-				BC65D7D42CD014A100D466BD /* BloodPressureDBRepository.swift in Sources */,
 				BC65D7D52CD014A100D466BD /* SettingsRootView.swift in Sources */,
 				BC65D7D62CD014A100D466BD /* RouterEntryPoint.swift in Sources */,
 				BC65D7D72CD014A100D466BD /* Store.swift in Sources */,
+				BC135CBF2CD4F55100075723 /* Interval.swift in Sources */,
 				BC65D7D82CD014A100D466BD /* CoreDataHelpers.swift in Sources */,
 				BC65D7D92CD014A100D466BD /* Router.swift in Sources */,
 				BC65D7DA2CD014A100D466BD /* UsersDBRepository.swift in Sources */,
@@ -503,6 +509,8 @@
 				BC65D7DF2CD014A100D466BD /* Routes.swift in Sources */,
 				BC65D7E02CD014A100D466BD /* CancelBag.swift in Sources */,
 				BC65D7E12CD014A100D466BD /* ViewExtension.swift in Sources */,
+				BC135CBC2CD4F48600075723 /* BloodPressureDBRepository.swift in Sources */,
+				BC135CBD2CD4F48600075723 /* StubBloodPressureDBRepository.swift in Sources */,
 				BC65D7E22CD014A100D466BD /* BloodPressure.swift in Sources */,
 				BC65D7E32CD014A100D466BD /* OverviewScreen.swift in Sources */,
 				BC65D7E42CD014A100D466BD /* AppDelegate.swift in Sources */,
@@ -668,6 +676,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.balaz.healthioapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,6 +707,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.balaz.healthioapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -727,15 +737,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BC65D7832CD014A100D466BD /* db_model_v1.xcdatamodeld */ = {
+		BCCC8D3B2CD7E6D30036C8FC /* db_model_v1.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BC65D7822CD014A100D466BD /* db_model_v1.xcdatamodel */,
+				BCCC8D3C2CD7E6D30036C8FC /* db_model_v1.xcdatamodel */,
 			);
-			currentVersion = BC65D7822CD014A100D466BD /* db_model_v1.xcdatamodel */;
-			name = db_model_v1.xcdatamodeld;
-			path = "../../../../../Downloads/clean-architecture-swiftui-master 3/CountriesSwiftUI/Persistence/db_model_v1.xcdatamodeld";
+			currentVersion = BCCC8D3C2CD7E6D30036C8FC /* db_model_v1.xcdatamodel */;
+			path = db_model_v1.xcdatamodeld;
 			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};

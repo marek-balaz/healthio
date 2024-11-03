@@ -10,30 +10,30 @@ import Combine
 
 struct StubBloodPressureService: BloodPressureService {
     
-    func addRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
+    func store(bloodPressureRecords: [BloodPressure], for userProfileId: UUID) -> AnyPublisher<Void, Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
     
-    func editRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
+    func edit(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
     
-    func deleteRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
+    func delete(bloodPressureId: UUID) -> AnyPublisher<Void, Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
     
-    func fetchRecords() -> AnyPublisher<[BloodPressure], Error> {
+    func fetch(interval: Interval, for userProfileId: UUID) -> AnyPublisher<[BloodPressure], Error> {
         Future { promise in
-            promise(.success([]))
+            promise(.success(([])))
         }
         .eraseToAnyPublisher()
     }

@@ -10,8 +10,8 @@ import Combine
 import CoreData
 
 struct StubUsersService: UsersService {
-    
-    func getSelectedUser(id: UUID? = nil) {
+  
+    func getSelectedUser(id: UUID?) {
         
     }
     
@@ -29,13 +29,13 @@ struct StubUsersService: UsersService {
         .eraseToAnyPublisher()
     }
     
-    func deleteUser(_ userProfile: UserProfile) -> AnyPublisher<Void, Error> {
+    func deleteUser(_ id: UUID) -> AnyPublisher<Void, any Error> {
         Future { promise in
             promise(.success(()))
         }
         .eraseToAnyPublisher()
     }
-    
+
     func fetchUsers(search: String) -> AnyPublisher<[UserProfile], Error> {
         Future { promise in
             promise(.success([]))

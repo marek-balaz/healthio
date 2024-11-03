@@ -11,7 +11,7 @@ import CoreData
 
 struct StubUsersDBRepository: UsersDBRepository {
     
-    func add(userProfile: UserProfile) -> AnyPublisher<Void, any Error> {
+    func store(userProfile: UserProfile) -> AnyPublisher<Void, any Error> {
         Future { promise in
             promise(.success(()))
         }
@@ -25,7 +25,7 @@ struct StubUsersDBRepository: UsersDBRepository {
         .eraseToAnyPublisher()
     }
     
-    func delete(userProfile: UserProfile) -> AnyPublisher<Void, any Error> {
+    func delete(userProfileId: UUID) -> AnyPublisher<Void, any Error> {
         Future { promise in
             promise(.success(()))
         }

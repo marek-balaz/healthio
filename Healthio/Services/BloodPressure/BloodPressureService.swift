@@ -10,55 +10,76 @@ import Combine
 
 protocol BloodPressureService {
     
-    func addRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
+    func store(bloodPressureRecords: [BloodPressure], for userProfileId: UUID) -> AnyPublisher<Void, Error>
     
-    func editRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
+    func edit(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
     
-    func deleteRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
+    func delete(bloodPressureId: UUID) -> AnyPublisher<Void, Error>
     
-    func fetchRecords() -> AnyPublisher<[BloodPressure], Error>
+    func fetch(interval: Interval, for userProfileId: UUID) -> AnyPublisher<[BloodPressure], Error>
     
     func bloodPressureCategory(systolic: Int, diastolic: Int) -> BloodPressureCategory
+    
 }
 
 struct BloodPressureServiceImpl: BloodPressureService {
-    
+
     let appState: Store<AppState>
+    
+    let usersRepository: UsersDBRepository
     
     let bloodPressureRepository: BloodPressureDBRepository
     
     init(
         appState: Store<AppState>,
+        usersRepository: UsersDBRepository,
         bloodPressureRepository: BloodPressureDBRepository
     ) {
         self.appState = appState
+        self.usersRepository = usersRepository
         self.bloodPressureRepository = bloodPressureRepository
     }
     
-    func addRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
-        return bloodPressureRepository.add(bloodPressure: bloodPressure)
+    func store(
+        bloodPressureRecords: [BloodPressure],
+        for userProfileId: UUID
+    ) -> AnyPublisher<Void, Error> {
+        bloodPressureRepository.store(
+            bloodPressureRecords: bloodPressureRecords,
+            for: userProfileId
+        )
     }
     
-    func editRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
-        return bloodPressureRepository.edit(bloodPressure: bloodPressure)
+    func edit(
+        bloodPressure: BloodPressure
+    ) -> AnyPublisher<Void, Error> {
+        bloodPressureRepository.edit(
+            bloodPressure: bloodPressure
+        )
     }
     
-    func deleteRecord(_ bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
-        return bloodPressureRepository.delete(bloodPressure: bloodPressure)
+    func delete(
+        bloodPressureId: UUID
+    ) -> AnyPublisher<Void, Error> {
+        bloodPressureRepository.delete(
+            bloodPressureId: bloodPressureId
+        )
     }
     
-    func fetchRecords() -> AnyPublisher<[BloodPressure], Error> {
-        if let userId = appState[\.userData.userProfile].value??.id {
-            return bloodPressureRepository.fetchAll(userId)
-        } else {
-            return Future { promise in
-                promise(.success([]))
-            }
-            .eraseToAnyPublisher()
-        }
+    func fetch(
+        interval: Interval,
+        for userProfileId: UUID
+    ) -> AnyPublisher<[BloodPressure], Error> {
+        bloodPressureRepository.fetch(
+            interval: interval,
+            for: userProfileId
+        )
     }
     
-    func bloodPressureCategory(systolic: Int, diastolic: Int) -> BloodPressureCategory {
+    func bloodPressureCategory(
+        systolic: Int,
+        diastolic: Int
+    ) -> BloodPressureCategory {
         switch (systolic, diastolic) {
         case (let s, let d) where s < 120 && d < 80:
             return .normal

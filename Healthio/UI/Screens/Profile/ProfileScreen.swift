@@ -28,8 +28,6 @@ struct ProfileScreen: View {
     
     @State private var userProfiles: Loadable<[UserProfile]> = .notRequested
     
-    @State private var isAddUserPresented: Bool = false
-    
     var body: some View {
         
         content
@@ -55,14 +53,14 @@ extension ProfileScreen {
     @ViewBuilder
     var content: some View {
         switch userProfiles {
-        case .notRequested, .failed:
-            Rectangle()
-                .fill(Color.blue)
-        case .isLoading:
-            Rectangle()
-                .fill(Color.red)
+        case .notRequested, .isLoading:
+            ProgressView()
         case .loaded(let profiles):
             detail(for: profiles)
+        case .failed:
+            PlaceholderView(
+                title: String(localized: "unspecified_error")
+            )
         }
     }
     
@@ -128,6 +126,22 @@ extension ProfileScreen {
             self.userProfiles = .loaded(userProfiles)
         }
         .store(in: cancelBag)
+    }
+    
+    func delete(userProfile: UserProfile) {
+        di.services.usersService.deleteUser(userProfile.id)
+            .receive(on: DispatchQueue.main)
+            .sink { result in
+                switch result {
+                case .finished:
+                    search()
+                case .failure(let error):
+                    apiError = (error, true)
+                }
+            } receiveValue: { _ in
+                // skip
+            }
+            .store(in: cancelBag)
     }
     
 }

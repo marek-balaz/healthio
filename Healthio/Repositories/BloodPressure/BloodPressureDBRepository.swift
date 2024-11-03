@@ -11,13 +11,13 @@ import CoreData
 
 protocol BloodPressureDBRepository {
     
-    func add(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
+    func store(bloodPressureRecords: [BloodPressure], for userProfileId: UUID) -> AnyPublisher<Void, Error>
     
     func edit(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
     
-    func delete(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error>
+    func delete(bloodPressureId: UUID) -> AnyPublisher<Void, Error>
     
-    func fetchAll(_ userId: UUID?) -> AnyPublisher<[BloodPressure], Error>
+    func fetch(interval: Interval, for userProfileId: UUID) -> AnyPublisher<[BloodPressure], Error>
     
 }
 
@@ -25,57 +25,79 @@ struct BloodPressureDBRepositoryImpl: BloodPressureDBRepository {
     
     let persistentStore: PersistentStore
     
-    init(persistentStore: PersistentStore) {
+    init(
+        persistentStore: PersistentStore
+    ) {
         self.persistentStore = persistentStore
     }
     
-    func add(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
-        return persistentStore.update { context in
-            let bloodPressureMO = BloodPressureMO(context: context)
-            bloodPressureMO.userId = bloodPressure.userId
-            bloodPressureMO.timestamp = bloodPressure.timestamp
-            bloodPressureMO.diastolic = Int32(bloodPressure.diastolic)
-            bloodPressureMO.systolic = Int32(bloodPressure.systolic)
-            bloodPressureMO.pulse = Int32(bloodPressure.pulse)
-            try context.save()
+    func store(
+        bloodPressureRecords: [BloodPressure],
+        for userProfileId: UUID
+    ) -> AnyPublisher<Void, Error> {
+        persistentStore.update { context in
+            do {
+                let parentRequest = UserProfileMO.currentUser(userProfileId)
+                guard let parent = try context.fetch(parentRequest).first else {
+                    throw AppError.domain(.data(.notFound))
+                }
+                for record in bloodPressureRecords {
+                    record.store(in: context, user: parent)
+                }
+            } catch {
+                throw error
+            }
         }
     }
     
-    func edit(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
-        return persistentStore.update { context in
-            let fetchRequest: NSFetchRequest<BloodPressureMO> = BloodPressureMO.fetchRequest()
-            
-            fetchRequest.predicate = NSPredicate(format: "userId == %@", bloodPressure.id as CVarArg)
-            
-            if let bloodPressureMO = try context.fetch(fetchRequest).first {
-                bloodPressureMO.userId = bloodPressure.userId
-                bloodPressureMO.timestamp = bloodPressure.timestamp
+    func edit(
+        bloodPressure: BloodPressure
+    ) -> AnyPublisher<Void, Error> {
+        persistentStore.update { context in
+            do {
+                let parentRequest = UserProfileMO.currentUser(bloodPressure.userId)
+                guard let userProfileMO = try context.fetch(parentRequest).first else {
+                    throw AppError.domain(.data(.notFound))
+                }
+                
+                let selfRequest = BloodPressureMO.getRecord(bloodPressure.id)
+                guard let bloodPressureMO = try context.fetch(selfRequest).first else {
+                    throw AppError.domain(.data(.notFound))
+                }
+                
+                bloodPressureMO.user = userProfileMO
                 bloodPressureMO.diastolic = Int32(bloodPressure.diastolic)
                 bloodPressureMO.systolic = Int32(bloodPressure.systolic)
                 bloodPressureMO.pulse = Int32(bloodPressure.pulse)
-                try context.save()
-            } else {
-                throw NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("global_repo_error", comment: "")])
+                bloodPressureMO.timestamp = bloodPressure.timestamp
+            } catch {
+                throw error
             }
         }
     }
     
-    func delete(bloodPressure: BloodPressure) -> AnyPublisher<Void, Error> {
-        return persistentStore.update { context in
-            let fetchRequest: NSFetchRequest<BloodPressureMO> = BloodPressureMO.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "userId == %@", bloodPressure.id as CVarArg)
-            if let bloodPressureMO = try context.fetch(fetchRequest).first {
+    func delete(
+        bloodPressureId: UUID
+    ) -> AnyPublisher<Void, Error> {
+        persistentStore.update { context in
+            do {
+                let request = BloodPressureMO.getRecord(bloodPressureId)
+                guard let bloodPressureMO = try context.fetch(request).first else {
+                    throw AppError.domain(.data(.notFound))
+                }
                 context.delete(bloodPressureMO)
-                try context.save()
-            } else {
-                throw NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("global_repo_error", comment: "")])
+            } catch {
+                throw error
             }
         }
     }
-        
-    func fetchAll(_ userId: UUID?) -> AnyPublisher<[BloodPressure], Error> {
-        let fetchRequest: NSFetchRequest<BloodPressureMO> = BloodPressureMO.records(userId)
-        return self.persistentStore.fetch(fetchRequest) { bloodPressureMO in
+    
+    func fetch(
+        interval: Interval,
+        for userProfileId: UUID
+    ) -> AnyPublisher<[BloodPressure], Error> {
+        let fetchRequest: NSFetchRequest<BloodPressureMO> = BloodPressureMO.records(interval, for: userProfileId)
+        return persistentStore.fetch(fetchRequest) { bloodPressureMO in
             return BloodPressure(managedObject: bloodPressureMO)
         }
     }
@@ -83,22 +105,36 @@ struct BloodPressureDBRepositoryImpl: BloodPressureDBRepository {
 }
 
 extension BloodPressureMO {
-    
-    static func records(_ userId: UUID?) -> NSFetchRequest<BloodPressureMO> {
+    static func getRecord(_ id: UUID) -> NSFetchRequest<BloodPressureMO> {
         let request = NSFetchRequest<BloodPressureMO>(entityName: BloodPressureMO.entityName)
-        var predicates: [NSPredicate] = []
-
-        if let userId {
-            let searchPredicate = NSPredicate(format: "userId == %@", userId as CVarArg)
-            predicates.append(searchPredicate)
-
-            request.predicate = NSCompoundPredicate(type: .and, subpredicates: predicates)
-        } else {
-            request.predicate = NSPredicate(value: true)
-        }
-        
+        request.predicate = NSPredicate(format: "id == %@", id as CVarArg)
         return request
     }
     
-}
+    static func records(
+        _ interval: Interval,
+        for userProfileId: UUID
+    ) -> NSFetchRequest<BloodPressureMO> {
+        let request = NSFetchRequest<BloodPressureMO>(entityName: BloodPressureMO.entityName)
+        
+        let endDate = Date()
+        var predicate: NSPredicate
 
+        if interval != .all {
+            let startDate = Calendar.current.date(byAdding: .day, value: -interval.rawValue, to: endDate)!
+            predicate = NSPredicate(
+                format: "user.userId == %@ AND timestamp >= %@ AND timestamp <= %@",
+                userProfileId as CVarArg,
+                startDate as CVarArg,
+                endDate as CVarArg
+            )
+        } else {
+            predicate = NSPredicate(format: "user.userId == %@")
+        }
+        
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: true)]
+        
+        return request
+    }
+}

@@ -34,6 +34,7 @@
 "global_edit"="Edit";
 "global_cancel"="Cancel";
 "global_repo_error"="Operation could not be completed";
+"global_repo_not_found"="Not found.";
 "unspecified_error"="Unspecified error";
 "global_ok"="OK";
 "global_not_available"="n/a";

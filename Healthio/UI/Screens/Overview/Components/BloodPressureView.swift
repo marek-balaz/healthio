@@ -138,27 +138,9 @@ extension BloodPressureView {
 // MARK: - API
 
 extension BloodPressureView {
-    
-    func addRecord(_ record: BloodPressure) {
-        di.services.bloodPressureService.addRecord(
-            record
-        )
-        .receive(on: DispatchQueue.main)
-        .sink { result in
-            switch result {
-            case .finished:
-                loadRecords()
-            case .failure(let error):
-                apiError = (error, true)
-            }
-        } receiveValue: { _ in
-            // skip
-        }
-        .store(in: cancelBag)
-    }
-    
+
     func loadRecords() {
-        di.services.bloodPressureService.fetchRecords()
+        di.services.bloodPressureService.fetch(interval: .days365, for: profile.id)
             .receive(on: DispatchQueue.main)
             .sink { result in
                 switch result {

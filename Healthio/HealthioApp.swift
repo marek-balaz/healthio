@@ -130,14 +130,10 @@ extension HealthioApp {
             )
         )
 
-        let addBloodPressureRecordsElena = BloodPressure.mockElena.map {
-            delegate.appEnvironment.container.services.bloodPressureService.addRecord($0)
-        }
-        let addBloodPressureRecordsStefan = BloodPressure.mockStefan.map {
-            delegate.appEnvironment.container.services.bloodPressureService.addRecord($0)
-        }
+        let addBloodPressureRecordsElena = delegate.appEnvironment.container.services.bloodPressureService.store(bloodPressureRecords: BloodPressure.mockElena, for: UserProfile.elenaId)
+        let addBloodPressureRecordsStefan = delegate.appEnvironment.container.services.bloodPressureService.store(bloodPressureRecords: BloodPressure.mockStefan, for: UserProfile.stefanId)
 
-        let allPublishers = [addUserStefan, addUserElena] + addBloodPressureRecordsElena + addBloodPressureRecordsStefan
+        let allPublishers = [addUserStefan, addUserElena, addBloodPressureRecordsElena, addBloodPressureRecordsStefan]
 
         allPublishers.publisher
             .flatMap { $0 }

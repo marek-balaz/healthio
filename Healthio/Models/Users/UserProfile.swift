@@ -25,21 +25,6 @@ struct UserProfile: Equatable, Hashable {
     
 }
 
-// Prototype mocks
-extension UserProfile {
-    static let stefanId: UUID = UUID(uuidString: "00000000-0000-0000-1000-000000000000")!
-    static let elenaId: UUID = UUID(uuidString: "00000000-0000-0000-2000-000000000001")!
-    
-    static let mockProfile: UserProfile = .init(
-        userId: UUID(),
-        name: "Rastislav",
-        avatar: UIImage(named: "male-face")?.pngData(),
-        birthDate: DateFormatter.dd_MM_yyyy.date(from: "20.12.1970")!,
-        weight: 120.8,
-        height: 180
-    )
-}
-
 extension UserProfile: Identifiable {
     var id: UUID { userId }
 }
@@ -80,4 +65,19 @@ extension UserProfile {
         return userProfile
     }
     
+}
+
+// Prototype mocks
+extension UserProfile {
+    static let stefanId: UUID = UUID(uuidString: "00000000-0000-0000-1000-000000000000")!
+    static let elenaId: UUID = UUID(uuidString: "00000000-0000-0000-2000-000000000001")!
+    
+    static let mockProfile: UserProfile = .init(
+        userId: UUID(),
+        name: "Rastislav",
+        avatar: UIImage(named: "male-face")?.pngData(),
+        birthDate: DateFormatter.dd_MM_yyyy.date(from: "20.12.1970")!,
+        weight: 120.8,
+        height: 180
+    )
 }
