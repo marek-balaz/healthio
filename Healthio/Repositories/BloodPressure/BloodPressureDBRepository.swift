@@ -121,7 +121,7 @@ extension BloodPressureMO {
         var predicate: NSPredicate
 
         if interval != .all {
-            let startDate = Calendar.current.date(byAdding: .day, value: -interval.rawValue, to: endDate)!
+            let startDate = Calendar.current.date(byAdding: .day, value: -interval.rawValue, to: endDate) ?? Date()
             predicate = NSPredicate(
                 format: "user.userId == %@ AND timestamp >= %@ AND timestamp <= %@",
                 userProfileId as CVarArg,

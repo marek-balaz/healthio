@@ -10,18 +10,15 @@ import SwiftUI
 
 struct AvatarView: View {
     
-    let userProfile: UserProfile??
+    let avatar: Image?
     
     let width: CGFloat
     
     let height: CGFloat
     
     var body: some View {
-        if let profile = userProfile,
-           let data = profile?.avatar,
-           let img = UIImage(data: data)
-        {
-            Image(uiImage: img)
+        if let avatar {
+            avatar
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: width, height: height)
@@ -31,6 +28,7 @@ struct AvatarView: View {
                 .resizable()
                 .frame(width: width, height: height)
                 .redacted(reason: .placeholder)
+                .clipShape(.circle)
         }
     }
     

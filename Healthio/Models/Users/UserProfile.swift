@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import UIKit
+import SwiftUI
 
 struct UserProfile: Equatable, Hashable {
 
@@ -27,6 +28,13 @@ struct UserProfile: Equatable, Hashable {
 
 extension UserProfile: Identifiable {
     var id: UUID { userId }
+}
+
+extension UserProfile {
+    func avatarImg() -> Image? {
+        guard let data = avatar, let avatar = UIImage(data: data) else { return nil }
+        return Image(uiImage: avatar)
+    }
 }
 
 extension UserProfileMO: ManagedEntity { }

@@ -76,7 +76,10 @@ extension ProfileScreen {
                         di.services.usersService.getSelectedUser(id: profile.id)
                     } label: {
                         HStack(spacing: 16) {
-                            AvatarView(userProfile: profile, width: 50, height: 50)
+                            AvatarView(
+                                avatar: profile.avatarImg(),
+                                width: 32, height: 32
+                            )
                             
                             Text(profile.name)
                                 .font(.system(size: 16))

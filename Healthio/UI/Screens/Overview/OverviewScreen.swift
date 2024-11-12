@@ -43,7 +43,7 @@ struct OverviewScreen: View {
                         di.appState[\.routerOverview].append(.userProfileDetail)
                     } label: {
                         AvatarView(
-                            userProfile: userProfile.value,
+                            avatar: userProfile.unwrap().value?.avatarImg(),
                             width: 32, height: 32
                         )
                     }
